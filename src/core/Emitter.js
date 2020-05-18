@@ -4,6 +4,7 @@ export class Emitter {
   }
 
   // Notify listeners if any
+  // table.emit('table:select', {a: 1})
   emit(event, ...args) {
     if (!Array.isArray(this.listeners[event])) {
       return false;
@@ -16,6 +17,7 @@ export class Emitter {
   }
 
   // Add a new listener
+  // formula.subscribe('table:select', () => {})
   subscribe(event, fn) {
     this.listeners[event] = this.listeners[event] || [];
     this.listeners[event].push(fn);
