@@ -1,3 +1,4 @@
 .idea
+jsconfig.json
 node_modules
 dist
